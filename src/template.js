@@ -94,7 +94,7 @@ export function renderSlideHTML(slide, slideNumber, totalSlides) {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #f6f5f0;
+      background-color: #f0f4f8; /* light blue-gray outer background */
       overflow: hidden;
     }
 
@@ -104,15 +104,15 @@ export function renderSlideHTML(slide, slideNumber, totalSlides) {
       width: 1080px;
       height: 1350px;
       padding: 90px 100px 100px 140px; /* offset left to clear notebook red line */
-      background-color: #fbfaf7;
+      background-color: #ffffff; /* pure white paper background */
       background-image: 
-        linear-gradient(rgba(215, 210, 190, 0.45) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(215, 210, 190, 0.45) 1px, transparent 1px);
+        linear-gradient(rgba(0, 110, 220, 0.12) 1.5px, transparent 1.5px),
+        linear-gradient(90deg, rgba(0, 110, 220, 0.12) 1.5px, transparent 1.5px);
       background-size: 50px 50px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      border: 1px solid #e3dec9;
+      border: 1px solid #d2e4f5;
     }
 
     /* Spiral Notebook Binding (3D Rings on the left) */
@@ -272,8 +272,8 @@ export function renderSlideHTML(slide, slideNumber, totalSlides) {
     }
 
     .slide-description {
-      font-family: 'Inter', -apple-system, sans-serif;
-      font-size: 26px;
+      font-family: 'Lora', 'Georgia', serif; /* serif font matching the screenshot */
+      font-size: 28px;
       font-weight: 400;
       line-height: 1.65;
       color: #2b2b2b;
