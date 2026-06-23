@@ -48,7 +48,6 @@ You must output a single JSON object matching this schema exactly:
     {
       "type": "body",
       "heading": "Catchy Title for Seed 1 (max 6 words)",
-      "category": "ai", // Must choose one from: ai, coding, security, hardware, cloud, mobile, business, general
       "description": "A well-written, informative, and engaging narrative paragraph explaining this update in detail (about 40-50 words). Make it interesting, detailed, and clear so readers fully understand the topic and find it highly informative."
     },
     {
@@ -62,9 +61,8 @@ You must output a single JSON object matching this schema exactly:
 Constraints:
 1. Output MUST contain exactly 8 slides (1 title slide, 6 body slides, and 1 CTA slide).
 2. Each of the 6 body slides must correspond to one of the 6 user-provided seeds in sequential order (Slide 2 -> Seed 1, Slide 3 -> Seed 2, etc.).
-3. The category MUST be strictly selected from the allowed list: ai, coding, security, hardware, cloud, mobile, business, general.
-4. The description MUST be a complete, cohesive paragraph of 40-50 words (no bullet points, no lists).
-5. Output ONLY valid JSON. Use JSON mode. Do not write markdown, do not write code blocks.`;
+3. The description MUST be a complete, cohesive paragraph of 40-50 words (no bullet points, no lists).
+4. Output ONLY valid JSON. Use JSON mode. Do not write markdown, do not write code blocks.`;
 
   const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
     method: 'POST',
