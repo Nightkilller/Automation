@@ -104,13 +104,51 @@ export function renderSlideHTML(slide, slideNumber, totalSlides) {
       border: 1px solid #e3dec9;
     }
 
+    /* Spiral Notebook Binding (3D Rings on the left) */
+    .spiral-binding {
+      position: absolute;
+      left: 72px; /* positioned right over the binder crease */
+      top: 60px;
+      bottom: 60px;
+      width: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .spiral-ring {
+      width: 30px;
+      height: 14px;
+      background: linear-gradient(180deg, #d0d0d0 0%, #ffffff 30%, #a8a8a8 75%, #707070 100%);
+      border: 1.5px solid #4a4a4a;
+      border-radius: 7px;
+      box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+
+    /* Small punched hole in paper behind ring */
+    .spiral-ring::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background-color: #2b2a26;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
     /* Red notebook margin line */
     .slide-canvas::before {
       content: '';
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 90px;
+      left: 140px; /* shift margin line to accommodate spirals */
       width: 2px;
       background-color: rgba(220, 80, 80, 0.4);
       z-index: 2;
@@ -137,15 +175,16 @@ export function renderSlideHTML(slide, slideNumber, totalSlides) {
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background-color: #e5dec9;
-      border: 3px solid #1e1e1e;
+      background: linear-gradient(135deg, #e55a5a 0%, #f39c12 100%);
+      border: 2.5px solid #1e1e1e;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Inter', sans-serif;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 18px;
-      color: #1e1e1e;
+      color: #ffffff;
+      box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
     }
 
     /* Content Area */
@@ -314,6 +353,29 @@ export function renderSlideHTML(slide, slideNumber, totalSlides) {
 </head>
 <body>
   <div class="slide-canvas">
+    <!-- Spiral binder rings on the left side of the notebook -->
+    <div class="spiral-binding">
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+      <div class="spiral-ring"></div>
+    </div>
     <div class="header">
       <div class="handle-text">${escapeHtml(handle)}</div>
       <div class="avatar-circle">${escapeHtml(handle.charAt(1).toUpperCase() || 'C')}</div>

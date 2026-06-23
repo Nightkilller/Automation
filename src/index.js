@@ -30,7 +30,7 @@ async function main() {
     console.log(`[ORCHESTRATOR] Generated ${imagePaths.length} slide images.`);
 
     // 4. Send email with attached slides via Resend
-    await sendCarouselEmail(slideContent.topic, imagePaths);
+    await sendCarouselEmail(slideContent.topic, imagePaths, slideContent.instagram_caption);
 
     // 5. Log topic to history file for de-duplication
     saveTopicToHistory(topicObj);

@@ -32,6 +32,7 @@ async function callGroqAPI(apiKey, userPrompt) {
 You must output a single JSON object matching this schema exactly:
 {
   "topic": "Short catchy topic title (max 5 words)",
+  "instagram_caption": "A compelling, high-conversion Instagram post caption for this slides deck. Include a hook, bulleted summary, emojis, and 5-8 relevant trending tech/AI hashtags (e.g. #programming #artificialintelligence). Keep it structured and clean.",
   "slides": [
     {
       "type": "title",

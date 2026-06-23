@@ -8,7 +8,7 @@ import { Resend } from 'resend';
  * @param {Array<string>} imagePaths - Array of absolute paths of images to attach.
  * @returns {Promise<Object>} Resend sending response.
  */
-export async function sendCarouselEmail(topic, imagePaths) {
+export async function sendCarouselEmail(topic, imagePaths, caption = '') {
   const apiKey = process.env.RESEND_API_KEY;
   const toEmail = process.env.TO_EMAIL;
   const fromEmail = process.env.FROM_EMAIL || 'onboarding@resend.dev';
@@ -34,13 +34,19 @@ export async function sendCarouselEmail(topic, imagePaths) {
     subject: `Today's Tech Carousel: ${topic}`,
     html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #eee; padding: 20px; border-radius: 8px;">
-        <h2 style="color: #1a1a1a; border-bottom: 2px solid #e55a5a; padding-bottom: 10px;">CarouselForge Automation</h2>
+        <h2 style="color: #1a1a1a; border-bottom: 2px solid #e55a5a; padding-bottom: 10px; margin-top: 0;">CarouselForge Automation</h2>
         <p>Hi there,</p>
         <p>Today's AI/Tech carousel has been successfully generated for the topic: <strong>${topic}</strong>.</p>
-        <p>We've attached <strong>${imagePaths.length} high-DPI slides (1080x1350px)</strong> to this email, ready for you to download and upload directly to Instagram or other social platforms.</p>
-        <div style="background-color: #fdfaf0; border-left: 4px solid #e55a5a; padding: 15px; margin: 20px 0; border-radius: 4px;">
-          <p style="margin: 0; font-weight: bold;">Topic Details:</p>
-          <p style="margin: 5px 0 0 0; color: #555;">${topic}</p>
+        <p>We've attached <strong>${imagePaths.length} high-DPI slides (1080x1350px)</strong> to this email, ready for you to download and upload directly to Instagram.</p>
+        
+        <div style="background-color: #f7f9fa; border: 1px solid #e1e8ed; padding: 18px; margin: 20px 0; border-radius: 6px;">
+          <p style="margin: 0 0 10px 0; font-weight: bold; color: #1c1e21; font-size: 15px; border-bottom: 1px solid #e1e8ed; padding-bottom: 5px;">📝 Instagram Caption (Copy & Paste):</p>
+          <div style="font-family: 'Courier New', Courier, monospace; font-size: 14px; color: #333; white-space: pre-wrap; word-break: break-word; background: #fff; border: 1px dashed #ccd6dd; padding: 12px; border-radius: 4px;">${escapeHtml(caption)}</div>
+        </div>
+
+        <div style="background-color: #fdfaf0; border-left: 4px solid #e55a5a; padding: 12px; margin: 15px 0; border-radius: 4px; font-size: 14px;">
+          <p style="margin: 0; font-weight: bold; color: #1a1a1a;">Topic Seed:</p>
+          <p style="margin: 3px 0 0 0; color: #666;">${topic}</p>
         </div>
         <p>Best regards,<br/><strong>CarouselForge Bot</strong></p>
         <hr style="border: 0; border-top: 1px solid #eee; margin-top: 30px;" />
@@ -97,3 +103,17 @@ export async function sendFailureEmail(errorMessage) {
     console.log('[EMAIL] Failure alert email sent successfully.', data);
   }
 }
+
+/**
+ * Escapes special HTML characters to prevent email rendering bugs.
+ */
+function escapeHtml(unsafe) {
+  if (typeof unsafe !== 'string') return '';
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
