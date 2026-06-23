@@ -1,3 +1,14 @@
+const IMAGE_MAP = {
+  ai: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80',
+  coding: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
+  security: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80',
+  hardware: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80',
+  cloud: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80',
+  mobile: 'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=800&q=80',
+  business: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80',
+  general: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80'
+};
+
 /**
  * Renders the HTML content for a single slide.
  * @param {Object} slide - The slide data.
@@ -29,15 +40,15 @@ export function renderSlideHTML(slide, slideNumber, totalSlides) {
     `;
   } else {
     // Default body slide
-    const bulletsHtml = (slide.bullets || [])
-      .map(b => `<li>${escapeHtml(b)}</li>`)
-      .join('\n');
+    const category = (slide.category || 'general').toLowerCase();
+    const imageUrl = IMAGE_MAP[category] || IMAGE_MAP.general;
     bodyContent = `
       <div class="slide-body-container">
         <h2 class="body-heading">${escapeHtml(slide.heading)}</h2>
-        <ul class="body-bullets">
-          ${bulletsHtml}
-        </ul>
+        <div class="slide-image-container">
+          <img src="${imageUrl}" class="slide-image" alt="${category}" />
+        </div>
+        <p class="slide-description">${escapeHtml(slide.description)}</p>
       </div>
     `;
   }
@@ -227,43 +238,46 @@ export function renderSlideHTML(slide, slideNumber, totalSlides) {
       line-height: 1.4;
     }
 
-    /* Body Slide Layout */
+    /* Body Slide Layout with Images and Paragraphs */
     .slide-body-container {
       text-align: left;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .body-heading {
       font-family: 'Lora', 'Georgia', serif;
-      font-size: 52px;
+      font-size: 44px; /* slightly smaller to fit elements nicely */
       font-weight: 700;
-      line-height: 1.25;
+      line-height: 1.2;
       color: #1a1a1a;
-      margin-bottom: 45px;
-      position: relative;
+      margin-bottom: 25px;
     }
 
-    .body-bullets {
-      list-style: none;
-    }
-
-    .body-bullets li {
-      font-family: 'Inter', -apple-system, sans-serif;
-      font-size: 28px;
-      font-weight: 400;
-      line-height: 1.6;
-      color: #2b2b2b;
+    .slide-image-container {
+      width: 100%;
+      height: 480px; /* generous height for tech image display */
+      border: 3px solid #1e1e1e;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 6px 6px 0px rgba(30, 30, 30, 0.15);
       margin-bottom: 30px;
-      position: relative;
-      padding-left: 45px;
     }
 
-    .body-bullets li::before {
-      content: '⚡';
-      position: absolute;
-      left: 0;
-      top: 2px;
-      font-size: 24px;
-      color: #e55a5a;
+    .slide-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide-description {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.65;
+      color: #2b2b2b;
+      text-align: justify;
     }
 
     /* CTA Slide Layout */
