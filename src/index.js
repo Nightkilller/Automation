@@ -32,8 +32,14 @@ async function main() {
     // 4. Send email with attached slides via Resend
     await sendCarouselEmail(slideContent.topic, imagePaths, slideContent.instagram_caption);
 
-    // 5. Log topic to history file for de-duplication
-    saveTopicToHistory(topicObj);
+    // 5. Log all selected roundup topics to history file for de-duplication
+    if (topicObj.seeds && Array.isArray(topicObj.seeds)) {
+      for (const seed of topicObj.seeds) {
+        saveTopicToHistory({ type: topicObj.type, seed });
+      }
+    } else {
+      saveTopicToHistory(topicObj);
+    }
 
     // 6. Cleanup output directory files
     await cleanUpFiles(imagePaths);
