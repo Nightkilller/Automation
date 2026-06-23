@@ -97,7 +97,7 @@ The project is pre-configured to run automatically every day.
    - `RESEND_API_KEY`
    - `TO_EMAIL`
    - `FROM_EMAIL` (optional, defaults to `onboarding@resend.dev`)
-   - `IG_HANDLE` (optional, defaults to `@carouselforge`)
+   - `IG_HANDLE` (optional, defaults to `@dailytechdropss`)
 
 2. **Schedule:**
    The action runs daily at **03:30 UTC** (which translates to **9:00 AM IST**). You can adjust this by changing the cron expression in [.github/workflows/daily-carousel.yml](file:///Users/adityagupta/Desktop/auto/.github/workflows/daily-carousel.yml).

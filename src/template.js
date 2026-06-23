@@ -6,7 +6,7 @@
  * @returns {string} Fully styled HTML string.
  */
 export function renderSlideHTML(slide, slideNumber, totalSlides) {
-  const handle = process.env.IG_HANDLE || '@carouselforge';
+  const handle = process.env.IG_HANDLE || '@dailytechdropss';
   const isFirst = slideNumber === 1;
   const isLast = slideNumber === totalSlides;
 
