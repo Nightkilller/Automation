@@ -77,7 +77,7 @@ Evergreen concepts are defined inside [src/topicPicker.js](file:///Users/adityag
 ### Changing the Email Recipient or Sender
 To route the emails differently:
 - Modify `TO_EMAIL` or `FROM_EMAIL` in your local `.env` file.
-- For production runs, update the corresponding secrets in your GitHub repository's **Settings → Secrets and variables → Actions**.
+- For production runs, update the corresponding secrets in your GitHubb repository's **Settings → Secrets and variables → Actions**.
 
 ### Tweaking the Design & CSS
 The layout and design system are defined inside [src/template.js](file:///Users/adityagupta/Desktop/auto/src/template.js):
