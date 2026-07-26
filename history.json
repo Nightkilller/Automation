@@ -1093,5 +1093,35 @@
     "topic": "News Title: Nvidia, Microsoft, Meta warn against overregulating open-weight models (Link: https://www.cnbc.com/2026/07/24/nvidia-microsoft-meta-open-weight-ai-models.html)",
     "type": "roundup",
     "date": "2026-07-25T06:01:46.870Z"
+  },
+  {
+    "topic": "News Title: GM Backs Sodium Ion Batteries for U.S. Grid Storage (Link: https://spectrum.ieee.org/sodium-ion-battery-peak-energy)",
+    "type": "roundup",
+    "date": "2026-07-26T06:21:44.257Z"
+  },
+  {
+    "topic": "News Title: Negative Resistance (Link: https://lcamtuf.substack.com/p/negative-resistance)",
+    "type": "roundup",
+    "date": "2026-07-26T06:21:44.260Z"
+  },
+  {
+    "topic": "News Title: W4ME Station – a WASM-4 runtime for Java ME phones (Link: https://github.com/mulfyx/w4me-station)",
+    "type": "roundup",
+    "date": "2026-07-26T06:21:44.262Z"
+  },
+  {
+    "topic": "News Title: Systems and Delays (Link: https://martin.janiczek.cz/2026/07/24/systems-and-delays.html)",
+    "type": "roundup",
+    "date": "2026-07-26T06:21:44.265Z"
+  },
+  {
+    "topic": "News Title: Inflect-Micro-v2: complete voice in 9.36M parameters (Link: https://huggingface.co/owensong/Inflect-Micro-v2)",
+    "type": "roundup",
+    "date": "2026-07-26T06:21:44.266Z"
+  },
+  {
+    "topic": "News Title: Humans haven't stopped evolving (Link: https://www.harvardmagazine.com/research/harvard-human-evolution-genes-selective-pressure)",
+    "type": "roundup",
+    "date": "2026-07-26T06:21:44.268Z"
   }
 ]
