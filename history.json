@@ -1213,5 +1213,35 @@
     "topic": "News Title: LearnVector – Andrew Ng's AI company building one‑to‑one learning experiences (Link: https://learnvector.ai/)",
     "type": "roundup",
     "date": "2026-07-29T06:14:43.836Z"
+  },
+  {
+    "topic": "News Title: Some thoughts about Anthropic's new cryptanalysis results (Link: https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/)",
+    "type": "roundup",
+    "date": "2026-07-30T06:07:50.046Z"
+  },
+  {
+    "topic": "News Title: Zuckerberg says Meta’s enterprise AI opportunity extends beyond agents (Link: https://techcrunch.com/2026/07/29/zuckerberg-says-metas-enterprise-ai-opportunity-extends-beyond-agents/)",
+    "type": "roundup",
+    "date": "2026-07-30T06:07:50.047Z"
+  },
+  {
+    "topic": "News Title: Anatomy of a Frontier Lab Agent Intrusion: A Timeline of the July 2026 Incident (Link: https://huggingface.co/blog/agent-intrusion-technical-timeline)",
+    "type": "roundup",
+    "date": "2026-07-30T06:07:50.048Z"
+  },
+  {
+    "topic": "News Title: ‘No one’s making a phone like this’: Light’s co-founders on building for the anti-smartphone generation (Link: https://techcrunch.com/video/no-ones-making-a-phone-like-this-lights-co-founders-on-building-for-the-anti-smartphone-generation/)",
+    "type": "roundup",
+    "date": "2026-07-30T06:07:50.048Z"
+  },
+  {
+    "topic": "News Title: Show HN: A local merge queue for parallel Claude Code agents (Link: https://github.com/funador/claude-code-merge-queue)",
+    "type": "roundup",
+    "date": "2026-07-30T06:07:50.049Z"
+  },
+  {
+    "topic": "News Title: Commodification of Intelligence: Good, Bad, and Ugly Circular AI Deals (Link: https://www.emergingtrajectories.com/lh/commodification-and-circularity/)",
+    "type": "roundup",
+    "date": "2026-07-30T06:07:50.050Z"
   }
 ]
