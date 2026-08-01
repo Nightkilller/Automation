@@ -1273,5 +1273,35 @@
     "topic": "News Title: Investors love AI, as long as you’re a cloud host (Link: https://techcrunch.com/2026/07/30/investors-love-ai-as-long-as-youre-a-cloud-host/)",
     "type": "roundup",
     "date": "2026-07-31T06:30:34.519Z"
+  },
+  {
+    "topic": "News Title: Everyone is building LLM routers, we deprecated ours (Link: https://manifest.build/blog/why-we-deprecated-our-llm-router/)",
+    "type": "roundup",
+    "date": "2026-08-01T06:15:30.972Z"
+  },
+  {
+    "topic": "News Title: Attention Decode on AMD MI450 GPUs: A Gluon Kernel Optimization Guide (Link: https://rocm.blogs.amd.com/software-tools-optimization/gluon-attention-decode-mi450/README.html)",
+    "type": "roundup",
+    "date": "2026-08-01T06:15:30.973Z"
+  },
+  {
+    "topic": "News Title: OpenAI reportedly finds evidence that more of its agents ran amok (Link: https://techcrunch.com/2026/07/31/openai-reportedly-finds-evidence-that-more-of-its-agents-ran-amok/)",
+    "type": "roundup",
+    "date": "2026-08-01T06:15:30.974Z"
+  },
+  {
+    "topic": "News Title: Software for One (Link: https://www.ajwaxman.com/writing/software-for-one)",
+    "type": "roundup",
+    "date": "2026-08-01T06:15:30.976Z"
+  },
+  {
+    "topic": "News Title: Loops (YC W22) Is Hiring a Product Educator (Link: https://www.ycombinator.com/companies/loops/jobs/zqUnwqB-product-educator-technical-content-creator)",
+    "type": "roundup",
+    "date": "2026-08-01T06:15:30.977Z"
+  },
+  {
+    "topic": "News Title: A Week in Matrix (Link: https://piegames.de/dumps/a-week-in-matrix/)",
+    "type": "roundup",
+    "date": "2026-08-01T06:15:30.977Z"
   }
 ]
